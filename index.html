@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Lifetime With You</title>
+    <meta name="description" content="A heartfelt handmade scrapbook for a monthsary gift." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <section class="cover-page" id="cover" aria-label="Scrapbook cover">
+        <div class="floating-heart heart-1">♡</div>
+        <div class="floating-heart heart-2">♡</div>
+        <div class="floating-heart heart-3">♡</div>
+        <div class="floating-heart heart-4">♡</div>
+
+        <div class="cover-paper">
+          <div class="cover-decorations" aria-hidden="true">
+            <span>✿</span>
+            <span>❀</span>
+            <span>✦</span>
+            <span>❁</span>
+            <span>▤</span>
+            <span>📷</span>
+          </div>
+
+          <h1>A Lifetime With You</h1>
+          <blockquote>
+            Every month, another page.<br />
+            Every page, another memory.<br />
+            Every memory, another reason to love you.
+          </blockquote>
+          <a class="cover-button" href="#page-1">Open Our Scrapbook ❤️</a>
+        </div>
+      </section>
+
+      <main class="scrapbook-app" aria-label="Our scrapbook pages">
+        <header class="scrapbook-header">
+          <p class="header-tag">A little love, preserved month by month</p>
+          <h2>Our Scrapbook of Beautiful Days</h2>
+        </header>
+
+        <section class="memory-page" id="page-1" aria-label="First scrapbook page">
+          <div class="page-label">Page 1</div>
+          <article class="page page-left flip-card" data-page="1">
+            <div class="polaroid-card">
+              <span class="tape">✂</span>
+              <div class="polaroid-image">
+                <img src="images/pic1.jpg" alt="A soft memory of our first monthsary" />
+              </div>
+              <div class="polaroid-caption">July 26, 2026</div>
+            </div>
+
+            <div class="page-heading">
+              <p class="page-month">Month 1</p>
+              <h3>Our First Monthsary</h3>
+              <p class="page-date">July 26, 2026</p>
+            </div>
+            <div class="decor-cluster" aria-hidden="true">
+              <span>🌸</span><span>💗</span><span>🍃</span>
+            </div>
+          </article>
+
+          <article class="page page-right">
+            <div class="letter-card">
+              <div class="letter-quote">“</div>
+              <p>Happy First Monthsary, my love! It's amazing how only one month with you has made my heart feel more at peace than it ever has before.</p>
+              <p>You turned ordinary days into memories I'll always treasure, and somehow you became the person I look for in every smile, every laugh, and every quiet moment. Thank you for choosing me, for loving me, and for making me believe that home isn't a place, it's you.</p>
+              <p>This may only be the first page of our story, but I pray it's the beginning of a lifetime filled with love, growth, and countless memories together. If one month with you already feels this beautiful, I can't imagine how wonderful forever will be.</p>
+              <p>And if I had to choose all over again, in every lifetime, I'd still choose you, without hesitation, without doubt, and with the same heart that falls in love with you more every single day. I love you, always and forever.</p>
+              <div class="signature">Forever yours,<br />Jeremy ❤️</div>
+            </div>
+            <div class="decor-cluster right" aria-hidden="true">
+              <span>✨</span><span>🦋</span><span>🌼</span>
+            </div>
+          </article>
+        </section>
+
+        <nav class="scrapbook-nav" aria-label="Page navigation">
+          <a class="nav-btn" href="#cover">← Cover</a>
+          <div class="page-link-group">
+            <a class="nav-btn small" href="#page-1">Page 1</a>
+          </div>
+        </nav>
+
+        <section class="music-player-card" aria-label="Music player">
+          <div class="music-meta">
+            <p class="music-label">Soft soundtrack</p>
+            <h3>Gentle moments</h3>
+          </div>
+
+          <div class="music-controls">
+            <audio controls autoplay loop>
+              <source src="music/arawaraw.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const pages = document.querySelectorAll('.memory-page');
+
+      pages.forEach((page) => {
+        page.querySelectorAll('.flip-card').forEach((card) => {
+          card.addEventListener('click', () => {
+            page.querySelectorAll('.flip-card').forEach((item) => {
+              item.classList.toggle('is-flipped');
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
